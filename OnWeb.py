@@ -2,9 +2,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-import Document
+import docx
 
-input()
+path = "D:\Python\pythonProject2023\Input.docx"
 
 url = 'https://xiumi.us/auth#/'
 #秀米的网址
@@ -38,6 +38,13 @@ driver.get(url2)
 
 time.sleep(1)
 
-path = "/Input.docx"
+
+
+#file = docx.getdocumenttext(path)
+file2 = docx.opendocx(path)
+
+
+for p in file2:
+    print(p)
 
 input()
