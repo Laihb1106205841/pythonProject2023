@@ -1,11 +1,13 @@
-
+import document
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 import docx
 
-path = "D:\Python\pythonProject2023\Input.docx"
+path = "Input.docx"#你的推送文件地址
 
+
+#############################################确定输入网址与登录账号、密码
 url = 'https://xiumi.us/auth#/'
 #秀米的网址
 
@@ -13,6 +15,9 @@ EMailName = "sdc@sustc.edu.cn"
 Password  = "shudenumber1"
 #树德书院的邮箱和密码
 
+
+
+#############################################登录秀米，开始作业
 driver = webdriver.Chrome()
 
 driver.get(url)#访问
@@ -37,14 +42,25 @@ url2 = 'https://xiumi.us/studio/v5#/paper'
 driver.get(url2)
 
 time.sleep(1)
+#登录成功！开始作业
+
+##################################开始输入文字
+
+Head ="树德书院推送标题"
+Summary ="推送摘要"
+Links = "http://baidu.com"
+Author ="树德书院宣传中心"
+
+MainPassage ="这是正文，在此输入你想输入的内容"
+
+Heading = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/div/div/div[3]/div/div[3]/div[1]/div/div[1]/div[2]/input').send_keys(Head)
+Summaried =driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/div/div/div[3]/div/div[3]/div[1]/div/div[1]/div[2]/textarea').send_keys(Summary)
+Linked =driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/div/div/div[3]/div/div[3]/div[1]/div/div[2]/div[2]/input').send_keys(Links)
+Authorized =driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/div/div/div[3]/div/div[3]/div[1]/div/div[2]/div[1]/input').send_keys(Author)
 
 
 
-#file = docx.getdocumenttext(path)
-file2 = docx.opendocx(path)
+#Mained = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/div/div/div[3]/div/div[3]/div[2]/div[1]/article/section/div[2]/div/div/div/div/div/section/div/div/div/section/div[2]/div[1]/div/div/section/div').send_keys(MainPassage)
 
 
-for p in file2:
-    print(p)
-
-input()
+time.sleep(50)
