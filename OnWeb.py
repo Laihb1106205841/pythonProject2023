@@ -51,7 +51,7 @@ Summary ="推送摘要"
 Links = "http://baidu.com"
 Author ="树德书院宣传中心"
 
-MainPassage ="这是正文，在此输入你想输入的内容"
+MainPassage ="这是正文，如果它保留下来了，那就是最好的"
 
 Heading = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/div/div/div[3]/div/div[3]/div[1]/div/div[1]/div[2]/input').send_keys(Head)
 Summaried =driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/div/div/div[3]/div/div[3]/div[1]/div/div[1]/div[2]/textarea').send_keys(Summary)
@@ -60,7 +60,8 @@ Authorized =driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/d
 
 
 
-#Mained = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/div/div/div[3]/div/div[3]/div[2]/div[1]/article/section/div[2]/div/div/div/div/div/section/div/div/div/section/div[2]/div[1]/div/div/section/div').send_keys(MainPassage)
+Mained = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/div/div/div[3]/div/div[3]/div[2]/div[1]/article/section/div[2]/div/div/div/div/div/section/div/div/div/section/div[2]/div[1]/div/div/section/div').click()
+Mained2 =driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div/div/div/div[3]/div/div[3]/div[2]/div[1]/article/section/div[2]/div/div/div/div/div/section/div/div/div/section/div[2]/div[1]/div/div/section/div').send_keys(MainPassage)
 
 
 time.sleep(50)
