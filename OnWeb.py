@@ -69,10 +69,18 @@ Authorized =driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[1]/div/d
 #Title12=driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[2]/div[1]/div/div[3]/div/div[2]/div[3]/ul/li[1]').click()
 #time.sleep(5)
 
+Title = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[2]/div[1]/div/div[3]/div/div[2]/div[1]/ul/li[1]/a').click()
+Title2= driver.find_element(By.XPATH, '/html/body/div[1]/div/div[2]/div[1]/div/div[3]/div/div[2]/div[1]/ul/li[1]/ul/li[1]/a').click()
+Title2= driver.find_element(By.XPATH, '/html/body/div[1]/div/div[2]/div[1]/div/div[3]/div/div[2]/div[1]/ul/li[1]/ul/li[1]/a').click()
+time.sleep(1)
+Title3=driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[2]/div[1]/div/div[3]/div/div[2]/div[3]/ul/li[1]').click()
+
+
 Mained = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div/div/div/div[3]/div/div[3]/div[2]/div[1]/article/section/div[2]/div/div/div/div/div/section/div/div/div/section/div[2]/div[1]/div/div/section/div').click()
 Mained2 =driver.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div/div/div/div[3]/div/div[3]/div[2]/div[1]/article/section/div[2]/div/div/div/div/div/section/div/div/div/section/div[2]/div[1]/div/div/section/div').send_keys(MainPassage)
+time.sleep(250)
 
-time.sleep(25)
+
 Save =driver.find_element(By.XPATH, '/html/body/div[1]/div/header/nav/div/div[1]/div/button[3]').click()
 
 time.sleep(50)
