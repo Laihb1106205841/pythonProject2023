@@ -9,7 +9,7 @@ import docx
 
 
 
-path = "Input.docx"#你的推送文件地址
+path = "../Input.docx"  #你的推送文件地址
 pathtxt = "666.txt"
 #file = docx.getdocumenttext(path)
 file2 = docx.opendocx(path)

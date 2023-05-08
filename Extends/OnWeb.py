@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 import time
 import docx
 
-path = "Input.docx"#你的推送文件地址
+path = "../Input.docx"  #你的推送文件地址
 
 
 #############################################确定输入网址与登录账号、密码
