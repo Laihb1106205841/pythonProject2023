@@ -16,15 +16,15 @@ def OnWeb(url,EMailName,Password,driver):
     button = driver.find_element(By.XPATH, "/html/body/div[1]/section/div/div[1]/form/div[4]/button").click()
     # 进入！
 
-    time.sleep(1)
+    time.sleep(0.5)
     button2 = driver.find_element(By.XPATH, '//*[@id="tn_xiumi_header_navbar_nav"]/ul/li[1]/a').click()
 
-    time.sleep(1)
+    time.sleep(0.5)
 
     url2 = 'https://xiumi.us/studio/v5#/paper'
     driver.get(url2)
 
-    time.sleep(1)
+    time.sleep(0.5)
     # 登录成功！开始作业
 
 def BasicSettings(Head,Summary,Links,Author,driver):
