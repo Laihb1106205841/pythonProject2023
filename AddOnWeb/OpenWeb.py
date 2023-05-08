@@ -53,11 +53,8 @@ def Write(MainPassage,driver):
     Clickp = '/html/body/div[1]/div/div[1]/div/div/div/div[3]/div/div[3]/div[2]/div[1]/article/section/div[2]/div/div/div/div/div/section/div/div/div/section/div[2]/div[1]/div/div/section/div/p'
     # 后边所使用的xpath
 
-    driver.find_element(By.XPATH,Ma).click()
-    driver.find_element(By.XPATH,Ma).send_keys(MainPassage[5])
-    driver.find_element(By.XPATH, zhai).click()
 
-    #
+    # 一些小成品代码，没什么用
     # MainedB = driver.find_element(By.XPATH,Clickp).click()
     #
     # Mained4 = driver.find_element(By.XPATH,
@@ -71,13 +68,11 @@ def Write(MainPassage,driver):
     #                          Clickp).send_keys(
     #     MainPassage[5]
     # )
+    # driver.find_element(By.XPATH,Clickp).click()
+    # driver.find_element(By.XPATH,Clickp).send_keys(MainPassage[5])
+    # driver.find_element(By.XPATH, zhai).click()
 
-
-
-    driver.find_element(By.XPATH,Clickp).click()
-    driver.find_element(By.XPATH,Clickp).send_keys(MainPassage[5])
-    driver.find_element(By.XPATH, zhai).click()
-
+    # 超级代码，负责把推送写上去
     for i in range(1, len(MainPassage)):
         driver.find_element(By.XPATH, Clickp).click()
         driver.find_element(By.XPATH, Clickp).send_keys(MainPassage[i])
