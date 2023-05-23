@@ -12,7 +12,7 @@ def OnWeb(url,EMailName,Password,driver):
     login = driver.find_element(By.NAME, 'email').send_keys(EMailName)
     passwordCode = driver.find_element(By.NAME, 'password').send_keys(Password)  # 填写账号密码
 
-    time.sleep(1)
+    time.sleep(0.5)
     button = driver.find_element(By.XPATH, "/html/body/div[1]/section/div/div[1]/form/div[4]/button").click()
     # 进入！
 

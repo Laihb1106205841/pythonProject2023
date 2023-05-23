@@ -21,6 +21,11 @@ def OpenTxt(path):
     try:
         with open(path, "r", encoding='utf-8') as f:
             data = f.readlines()
+
+            for i in range(len(data)):
+                data[i] = data[i].strip('\n')
+
+
             print(data)
             Num = LoadInfos(data)
             return Num
@@ -40,7 +45,10 @@ def LoadInfos(data):
 
     tus = []
 
+
+
     for line in data:
+
         tu = '图'
         if(tu in line):
             tus.append(tu)
